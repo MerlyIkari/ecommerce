@@ -1,8 +1,9 @@
 import React from "react";
-import useForm from "../hooks/useForm";
+import useForm from "../../hooks/useForm";
 import axios from "axios";
 import { useHistory } from "react-router";
-import { useUserContext } from "../context/userContext";
+import { useUserContext } from "../../context/userContext";
+import './login.css'
 
 export default function Login() {
   const history = useHistory();
@@ -24,7 +25,7 @@ export default function Login() {
               context.setUsuarioActual(response.data);
             }
           });
-        history.push("/");
+        history.push("/item");
       })
       .catch((error) => {
         console.log(error);
@@ -35,22 +36,24 @@ export default function Login() {
   //En este caso es la función que hará la petición para hacer login
   const { inputs, handleInput, handleSubmit } = useForm(login, {});
   return (
-    <div>
-      <h1>Login</h1>
+    <div className="login login--card">
+      <h1>Iniciar Sesión</h1>
       <form onSubmit={handleSubmit}>
-        <div>
-          <label htmlFor="email">Email</label>
+        <div className = "label--group">
+          <label htmlFor="email">Correo:</label>
+          <br/>
           <input
             id="email"
             type="text"
             name="email"
-            placeholder="Ingresa tu email"
+            placeholder="Ingresa tu correo"
             onChange={handleInput}
             value={inputs.email}
           />
         </div>
-        <div>
-          <label htmlFor="password">Contraseña</label>
+        <div className = "label--group">
+          <label htmlFor="password">Contraseña:</label>
+          <br/>
           <input
             id="password"
             type="password"
@@ -60,7 +63,7 @@ export default function Login() {
             value={inputs.password}
           />
         </div>
-        <button type="submit">Login</button>
+        <button type="submit" className="btn btn-login">Iniciar Sesión</button>
       </form>
     </div>
   );

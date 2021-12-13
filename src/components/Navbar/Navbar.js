@@ -1,6 +1,8 @@
 import React from "react";
-import "./navbar.css";
 import { Link } from "react-router-dom";
+import '../Navbar/navbar.css'
+import SearchBar from "../Searchbar/Searchbar"
+
 import { useUserContext } from "../../context/userContext";
 const Navbar = () => {
   const context = useUserContext();
@@ -9,6 +11,7 @@ const Navbar = () => {
       <nav className="navbar">
         {/* <!-- LOGO --> */}
         <div className="logo">Tienda virtual</div>
+        <SearchBar/>
         {/* <!-- NAVIGATION MENU --> */}
         <ul className="nav-links">
           {/* <!-- USING CHECKBOX HACK --> */}
@@ -19,7 +22,7 @@ const Navbar = () => {
           {/* <!-- NAVIGATION MENUS --> */}
           <div className="menu">
             <li>
-              <Link to="/">Home</Link>
+              <Link to="/">Inicio</Link>
             </li>
             {context.usuarioActual ? (
               <>
@@ -32,16 +35,16 @@ const Navbar = () => {
                   <Link to="/item">Productos</Link>
                 </li>
                 <li>
-                  <Link to="/logout">Logout</Link>
+                  <Link to="/logout">salir</Link>
                 </li>
               </>
             ) : (
               <>
                 <li>
-                  <Link to="/login">Login</Link>
+                  <Link to="/login">Inicio Sesión</Link>
                 </li>
                 <li>
-                  <Link to="/signup">Signup</Link>
+                  <Link to="/signup">Regístrate</Link>
                 </li>
               </>
             )}

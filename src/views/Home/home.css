@@ -1,0 +1,7 @@
+.product-container {
+    margin-top: 20px !important;
+    width: 90%;
+    margin: 0 auto;
+    border: 4px double darkslateblue;
+    border-radius: 15px;
+}
