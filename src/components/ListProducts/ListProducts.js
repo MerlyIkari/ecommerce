@@ -12,7 +12,7 @@ export default function ListProducts() {
     return (
         <div className="products">
            {context.listaProductos.map((product)=>(
-               <div className="card">
+               <div key={product._id} className="card">
                    <div>
                        <img  className="product-image" 
                        src={product.image} alt={product.product_name} />
@@ -22,7 +22,11 @@ export default function ListProducts() {
                     </div>
                     <div className="product-price">${product.price}</div>
                     <div>
-                    <button className="product-add-button" onClick={()=>context2.setCartItems([...context2.cartItems,product])}>Añadir al carrito</button>
+                    {/*<button className="product-add-button" 
+                        onClick={()=>context2.setCartItems([...context2.cartItems,product])}
+                        >  
+           Añadir al carrito</button>*/}
+                    <button className="product-add-button" onClick={()=>context2.handleAddCart(product)}>Añadir al carrito</button>
                     </div>
                </div>
               
