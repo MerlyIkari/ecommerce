@@ -1,12 +1,15 @@
-import "./App.css";
-import { UserProvider } from "./context/userContext";
-import Routes from "./routes";
+import Routes from './routes';
+import { ProductProvider } from './context/ProductContext';
+import {ItemProvider} from './context/ItemContext';
+
 function App() {
   return (
     <>
-      <UserProvider>
-        <Routes />
-      </UserProvider>
+    <ProductProvider>
+    <ItemProvider>
+    <Routes />
+    </ItemProvider>
+    </ProductProvider>
     </>
   );
 }

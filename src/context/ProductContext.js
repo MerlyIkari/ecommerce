@@ -11,7 +11,7 @@ function ProductProvider(props){
         axios
         .get("https://ecomerce-master.herokuapp.com/api/v1/item")
         .then((response)=>{
-            console.log(response.data);
+            //console.log(response.data);
             setListaProductos(response.data);
         })
         .catch((e)=>{
@@ -40,3 +40,4 @@ function ProductProvider(props){
 
   //por ultimo debo poner useProductContext en la pagina productos
   //para que envuelve a lista de productos y detalle de productos
+

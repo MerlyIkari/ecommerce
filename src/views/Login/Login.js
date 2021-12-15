@@ -25,7 +25,7 @@ export default function Login() {
               context.setUsuarioActual(response.data);
             }
           });
-        history.push("/item");
+        history.push("/Productos");
       })
       .catch((error) => {
         console.log(error);

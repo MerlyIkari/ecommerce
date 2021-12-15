@@ -1,0 +1,15 @@
+.product-container{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    text-align: center;
+    background-color: rgba(49, 41, 95, 0.137);
+}
+.product-container-izquierda{
+
+    width: 70%;
+    color: black;
+}
+.product-container-derecha{
+    width: 30%;
+}
