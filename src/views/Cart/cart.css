@@ -30,20 +30,16 @@
    font-weight: 700;
    margin-left: 5%;
    
-  
-   
-   
-}
-.cart-items-image{
-    
-    width: 50px;;
-    height: auto;
-    border: 5px solid rgb(194, 15, 15);
-    margin-right: 10px;
-    object-fit: cover;
-    
-    
-}
+  }
+
+  img{
+      width: 100px;
+      margin-top: 20px;
+      margin-left: 20px;
+      height: 150px;
+      border: 5px solid rgb(15, 113, 194);
+  }
+
 .cart-items-name,.cart-items-funcion{
     width: 25%;
 }
@@ -62,8 +58,9 @@ cursor: pointer;
 .cart-items-remove{
     background-color: coral;
 }
-.cart-items-total-price-name{
+.precio-total{
     display: flex;
+    justify-content:space-around;
     padding-top: 20px;
     padding-left: 20px;
     padding-bottom: 20px;
@@ -71,8 +68,7 @@ cursor: pointer;
     font-size: 20px;
 
 }
-.cart-items-total-price{
-    display: flex;
+.precio{
     padding-left: 45%;
     
 

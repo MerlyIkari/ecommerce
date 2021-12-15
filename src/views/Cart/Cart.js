@@ -1,4 +1,4 @@
-import React,{useState} from "react";
+import React,{useState, useEffect} from "react";
 import './cart.css';
 import { useItemContext } from "../../context/ItemContext";
 
@@ -7,15 +7,23 @@ export default function Cart(handleAddProduct,handleRemoveProduct,handleClearCar
    const context=useItemContext();
    const [TotalPaga, setTotalPaga]=useState(0);
    
+    useEffect(() => {
+        let auxTotalPaga=0;
+        context.cartItems.map((item)=>{
+            auxTotalPaga= auxTotalPaga + item.cant*item.price})
+            //console.log(TotalPaga);
+            setTotalPaga(auxTotalPaga);
+        
+    }, [context.cartItems])
 
-   const total=(cartItems)=>{
+  /*const total=(cartItems)=>{
                 let auxTotalPaga=0;
              (cartItems.map((item)=>{
                 return auxTotalPaga= auxTotalPaga + item.cant*item.price}))
-                console.log(TotalPaga);
+                //console.log(TotalPaga);
                 setTotalPaga(auxTotalPaga);
               
-   };
+   };*/
 
     return (
         <div className="cart-items">
@@ -29,7 +37,7 @@ export default function Cart(handleAddProduct,handleRemoveProduct,handleClearCar
             <div>
                 {context.cartItems.map( (item)=>(
                     <div key={item._id} className="cart-list">
-                        <div classname="cart-items-image">
+                        <div>
                         <img 
                         src={item.image} 
                         alt={item.product_name}/>
@@ -42,14 +50,23 @@ export default function Cart(handleAddProduct,handleRemoveProduct,handleClearCar
                             onClick={()=>context.handleRemoveProduct(item)}>-</button>
                         </div>
                         <div classname="cart-items-price">
-                            {item.cant}*${item.price}
+                            {item.cant}
                         </div>
+                        <div classname="cart-items-price">
+                            ${item.price}
+                        </div>
+                        <span classname="cart-items-price">
+                            {item.cant*item.price}
+                        </span>
                     </div>
                 ))}
-                <div classname="cart-items-total-price-name">
-                    Precio Total 
-                    <div classname="cart-items-total-price">10000</div>
             </div>
+            <div className="precio-total">
+                      <div>Precio Total</div>
+                    <div className="precio">
+                        <span>{TotalPaga}</span>
+                
+                    </div>
             </div>
             
            </div>

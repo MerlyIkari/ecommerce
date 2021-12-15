@@ -54,7 +54,7 @@ const Navbar = () => {
             </li>
             <li>
               <Link to="/cart">
-              <i class="fas fa-shopping-cart"></i>
+              <i className="fas fa-shopping-cart"></i>
               <span className="notif"> 
                 {context.cartItems.length===0 ? "": context.cartItems.length}
               </span>
