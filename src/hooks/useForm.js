@@ -6,7 +6,6 @@ import { useState } from "react";
 
 export default function useForm(callback, datos) {
   const [inputs, setInputs] = useState(datos); //vamos a guardar los valores del formulario
-  console.log(inputs);
 
   const handleInput = (event) => {
     const { name, value } = event.target;

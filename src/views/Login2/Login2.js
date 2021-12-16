@@ -3,19 +3,20 @@ import useForm from "../../hooks/useForm";
 import axios from "axios";
 import { useHistory } from "react-router";
 import { useUserContext } from "../../context/userContext";
+import './login2.css'
 
 export default function Login() {
   const history = useHistory();
   const context = useUserContext();
   
-  const login = (datos) => {
+  const login2 = (datos) => {
     axios
       .post("https://ecomerce-master.herokuapp.com/api/v1/login", datos)
       .then((response) => {
-        window.localStorage.setItem("token", response.data.tokenAdmin);
+        //window.localStorage.setItem("token", response.data.tokenAdmin);
         const config = {
           headers: {
-            Authorization: `JWT ${response.data.token}`,
+            Authorization: `JWT ${response.data.tokenAdmin}`,
           },
         };
         axios
@@ -35,13 +36,13 @@ export default function Login() {
 
   //Al useform le enviamos la función que se va a ejecutar en el submit
   //En este caso es la función que hará la petición para hacer login
-  const { inputs, handleInput, handleSubmit } = useForm(login, {});
+  const { inputs, handleInput, handleSubmit } = useForm(login2, {});
   return (
-    <div>
-      <h1>Login</h1>
+    <div className = "login">
+      <h1>Inicio de Sesión para Administradores</h1>
       <form onSubmit={handleSubmit}>
-        <div>
-          <label htmlFor="email">Email</label>
+        <div className="label--group">
+          <label htmlFor="email">Correo</label>
           <input
             id="email"
             type="text"
@@ -49,9 +50,10 @@ export default function Login() {
             placeholder="Ingresa tu email"
             onChange={handleInput}
             value={inputs.email}
+            required
           />
         </div>
-        <div>
+        <div className="label--group">
           <label htmlFor="password">Contraseña</label>
           <input
             id="password"
@@ -60,9 +62,10 @@ export default function Login() {
             placeholder="Ingresa tu contraseña"
             onChange={handleInput}
             value={inputs.password}
+            required
           />
         </div>
-        <button type="submit">Login</button>
+        <button type="submit" className = "btn btn-login">Login</button>
       </form>
     </div>
   );

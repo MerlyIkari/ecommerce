@@ -1,0 +1,89 @@
+.profile {
+    display: block;
+    margin-top: 40px !important;
+    margin : 0 auto;
+    border: 4px double darkslateblue;
+    border-radius: 15px;
+    background: linear-gradient(197deg, #8279c2 0%, #fff 100%);
+    width: 30%;
+    height: 40%;
+}
+
+header {
+    color: black;
+    padding: 10px;
+    text-align: center;
+    border: 4px double darkslateblue;
+    border-radius: 15px;
+    background: linear-gradient(197deg, #8279c2 0%, #fff 100%);
+}
+
+h3 {
+    text-align: center;
+    font-style: darkslateblue;
+    color: darkslateblue;
+}
+
+h1 {
+    display: flex;
+    color: white;
+    justify-content: center;
+    text-align: center;
+    background-color: darkslateblue;
+    margin: 0 auto; 
+    padding: 10px;
+}
+
+
+
+/* css para los label */
+
+.label--group  {
+    font-weight: bold;
+    background-color: rgba(71, 61, 139, 0.26); 
+    width: 80%;
+    border-radius: 15px;
+    
+}
+
+@media (max-width: 320px) and (min-width:100px) {
+    .profile {
+        width : 80vw;
+        
+    }
+    .label--group  {
+        width : 65%;
+    }
+    
+}
+
+@media (max-width: 480px) and (min-width:319px) {
+    .profile {
+        width : 60vw;
+        
+    }
+    .label--group  {
+        width : 70%;
+    }
+}
+
+@media (max-width: 768px) and (min-width:479px) {
+    .profile {
+        width : 60vw;
+        
+    }
+    .label--group  {
+        width : 80%;
+    }
+}
+
+@media (max-width: 1200px) and (min-width:767px) {
+    .profile {
+        width : 60vw;
+        
+    }
+    .label--group  {
+        width : 80%;
+    }
+}
+

@@ -1,6 +1,7 @@
 import React from "react";
 import useForm from "../../hooks/useForm";
 import axios from "axios";
+import withProtectionAdmin from "../../utils/withProtectionAdmin"
 //import withProtectionAdmin from "../../utils/withProtectionAdmin";
 //import { useHistory } from "react-router";
  const Crear=()=> {
@@ -118,4 +119,4 @@ import axios from "axios";
   );
 };
 
-export default (Crear);
+export default  withProtectionAdmin(Crear);

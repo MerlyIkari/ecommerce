@@ -50,6 +50,7 @@ export default function Login() {
             placeholder="Ingresa tu correo"
             onChange={handleInput}
             value={inputs.email}
+            required
           />
         </div>
         <div className = "label--group">
@@ -62,6 +63,7 @@ export default function Login() {
             placeholder="Ingresa tu contraseña"
             onChange={handleInput}
             value={inputs.password}
+            required
           />
         </div>
         <button type="submit" className="btn btn-login">Iniciar Sesión</button>

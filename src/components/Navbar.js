@@ -21,36 +21,59 @@ const Navbar = () => {
           {/* <!-- NAVIGATION MENUS --> */}
           <div className="menu">
             <li>
-              <Link to="/">Home</Link>
+            <Link to="/">
+              <i className="icon-conf fa fa-home">
+              </i>
+              </Link>
             </li>
             {context.usuarioActual ? (
               <>
                 <li>
                   <Link to="/profile">
-                    Bienvenido {context.usuarioActual.user.first_name}
+                    <i className=" fa fa-user-check"></i>
                   </Link>
                 </li>
                 <li>
-                  <Link to="/item">Productos</Link>
+                  <Link to="/productos">
+                    <i className="icon-conf fa fa-box-open"></i>
+                  </Link>
                 </li>
-                <li>
-                  <Link to="/logout">Logout</Link>
-                </li>
-                <li>
+                
+                {/* <li>
                   <Link to="/crear"></Link>
+                </li> */}
+                <li>
+              <Link to="/cart">
+              <i className="icon-conf fas fa-shopping-cart"></i>
+              <span className="notif"> 
+                {context2.cartItems.length===0 ? "": context2.cartItems.length}
+              </span>
+              </Link>
+            </li>
+            <li>
+                  <Link to="/logout">
+                    <i className="icon-conf fa fa-sign-out-alt"></i>
+                  </Link>
                 </li>
+                
               </>
             ) : (
               <>
                 <li>
-                  <Link to="/login">Login</Link>
+                <Link to="/login">
+                  <i className = "icon-conf fas fa-user-lock">
+                  </i>
+                  </Link>
                 </li>
                 <li>
-                  <Link to="/signup">Signup</Link>
+                <Link to="/signup">
+                  <i className = "icon-conf fas fa-user-plus">
+                  </i>
+                  </Link>
                 </li>
                 <li>
               <Link to="/cart">
-              <i className="fas fa-shopping-cart"></i>
+              <i className="icon-conf fas fa-shopping-cart"></i>
               <span className="notif"> 
                 {context2.cartItems.length===0 ? "": context2.cartItems.length}
               </span>

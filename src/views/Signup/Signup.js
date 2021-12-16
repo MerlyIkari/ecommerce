@@ -40,6 +40,7 @@ export default function Signup() {
             placeholder="Escribe tu nombre"
             onChange={handleInput}
             value={inputs.nombre}
+            required
           />
         </div>
         <div className = "label--group">
@@ -51,6 +52,7 @@ export default function Signup() {
             placeholder="Escribe tu apellido"
             onChange={handleInput}
             value={inputs.apellidos}
+            required
           />
         </div>
         <div className = "label--group">
@@ -61,6 +63,7 @@ export default function Signup() {
             name="birth_date"
             onChange={handleInput}
             value={inputs.edad}
+            required
           />
         </div>
         <div className = "label--group">
@@ -70,7 +73,9 @@ export default function Signup() {
             type="text"
             name="gender"
             onChange={handleInput}
-            value={inputs.genero}/>
+            value={inputs.genero}
+            required
+            />
             
         </div>
         <div className = "label--group">
@@ -81,6 +86,7 @@ export default function Signup() {
             placeholder="Escribe tu correo"
             onChange={handleInput}
             value={inputs.email}
+            required
           />
         </div>
         <div className = "label--group">
@@ -92,6 +98,7 @@ export default function Signup() {
             placeholder="Escribe tu contraseña"
             onChange={handleInput}
             value={inputs.password}
+            required
           />
         </div>
 

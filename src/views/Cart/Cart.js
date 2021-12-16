@@ -38,7 +38,7 @@ export default function Cart(handleAddProduct,handleRemoveProduct,handleClearCar
             <div>
                 {context.cartItems.map( (item)=>(
                     <div key={item._id} className="cart-list">
-                        <div>
+                        <div className = "cart-group">
                         <img 
                         src={item.image} 
                         alt={item.product_name}/>
@@ -50,22 +50,24 @@ export default function Cart(handleAddProduct,handleRemoveProduct,handleClearCar
                             <button className="cart-items-remove"
                             onClick={()=>context.handleRemoveProduct(item)}>-</button>
                         </div>
-                        <div classname="cart-items-price">
-                            {item.cant}
+                        <div className="cart-items-price">
+                        <div >
+                            Cantidad:{item.cant}
                         </div>
-                        <div classname="cart-items-price">
-                            ${item.price}
+                        <div >
+                           Precio Unitario: ${item.price}
                         </div>
-                        <span classname="cart-items-price">
-                            {item.cant*item.price}
-                        </span>
+                        <div >
+                            Total: ${item.cant*item.price}
+                        </div>
+                        </div>
                     </div>
                 ))}
             </div>
             <div className="precio-total">
-                      <div>Precio Total</div>
+                      <h3>Monto total</h3>
                     <div className="precio">
-                        <span>{TotalPaga}</span>
+                        <h3>{TotalPaga}</h3>
                 
                     </div>
             </div>

@@ -1,15 +1,7 @@
-.product-container{
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    text-align: center;
-    background-color: rgba(49, 41, 95, 0.137);
-}
-.product-container-izquierda{
-
-    width: 70%;
-    color: black;
-}
-.product-container-derecha{
-    width: 30%;
+.product-container {
+    margin-top: 20px !important;
+    width: 90%;
+    margin: 0 auto;
+    border: 4px double darkslateblue;
+    border-radius: 15px;
 }

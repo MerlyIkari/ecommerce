@@ -9,5 +9,7 @@ export default function withProtectionAdmin(Component) {
 
     return tokenAdmin ? <Component {...props} /> : <Redirect to="/login2" />;
   };
+
+  // verificar el component {...props} 
   return ProtectedComponent2;
 }

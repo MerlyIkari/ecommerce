@@ -1,17 +1,16 @@
 import React from "react";
+import "./navbar.css";
 import { Link } from "react-router-dom";
-import '../Navbar/navbar.css'
-import SearchBar from "../Searchbar/Searchbar"
-
-import { useUserContext } from "../../context/userContext";
+import { useItemContext } from "../../src/context/ItemContext"
+import { useUserContext } from "../../src/context/userContext";
 const Navbar = () => {
   const context = useUserContext();
+  const context2 = useItemContext();
   return (
     <>
       <nav className="navbar">
         {/* <!-- LOGO --> */}
         <div className="logo">Tienda virtual</div>
-        <SearchBar/>
         {/* <!-- NAVIGATION MENU --> */}
         <ul className="nav-links">
           {/* <!-- USING CHECKBOX HACK --> */}
@@ -28,29 +27,45 @@ const Navbar = () => {
               <>
                 <li>
                   <Link to="/profile">
-                    Bienvenido {context.usuarioActual.user.first_name}
+                   <i className="fa fa-user-check"></i>
                   </Link>
                 </li>
                 <li>
-                  <Link to="/item">Productos</Link>
+                  <Link to="/productos">Productos</Link>
                 </li>
                 <li>
-                  <Link to="/logout">Logout</Link>
+                  <Link to="/logout">Cerrar Sesión</Link>
                 </li>
                 <li>
                   <Link to="/crear"></Link>
                 </li>
+                <Link to="/cart">
+              <i className="fas fa-shopping-cart"></i>
+              <span className="notif"> 
+                {context2.cartItems.length===0 ? "": context2.cartItems.length}
+              </span>
+              </Link>
               </>
             ) : (
               <>
                 <li>
-                  <Link to="/login">Inicio Sesión</Link>
+                  <Link to="/login">Iniciar Sesión</Link>
                 </li>
                 <li>
                   <Link to="/signup">Regístrate</Link>
                 </li>
+                <li>
+              <Link to="/cart">
+              <i className="fas fa-shopping-cart"></i>
+              <span className="notif"> 
+                {context2.cartItems.length===0 ? "": context2.cartItems.length}
+              </span>
+              </Link>
+            </li>
+
               </>
             )}
+            
           </div>
         </ul>
       </nav>
