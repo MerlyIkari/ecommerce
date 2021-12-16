@@ -1,7 +1,7 @@
 import React from "react";
-import useForm from "../hooks/useForm";
+import useForm from "../../hooks/useForm";
 import axios from "axios";
-import withProtectionAdmin from "../utils/withProtectionAdmin";
+//import withProtectionAdmin from "../../utils/withProtectionAdmin";
 //import { useHistory } from "react-router";
  const Crear=()=> {
     
@@ -117,4 +117,5 @@ import withProtectionAdmin from "../utils/withProtectionAdmin";
     </div>
   );
 };
-export default withProtectionAdmin(Crear);
+
+export default (Crear);

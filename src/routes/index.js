@@ -3,7 +3,7 @@ import {BrowserRouter as Router,Switch,Route} from 'react-router-dom';
 import Home from '../views/Home';
 import Signup from '../views/Signup';
 import Login from '../views/Login';
-import Crear from "../views/Crear";
+import Crear from "../views/Crear/Crear";
 import Login2 from "../views/Login2/Login2";
 import Productos from '../views/Productos';
 import Navbar from '../components/Navbar';
