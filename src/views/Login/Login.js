@@ -22,10 +22,11 @@ export default function Login() {
           .get("https://ecomerce-master.herokuapp.com/api/v1/user/me", config)
           .then((response) => {
             if (response.status === 200) {
+              console.log(context);
               context.setUsuarioActual(response.data);
             }
           });
-        history.push("/Productos");
+        history.push("/");
       })
       .catch((error) => {
         console.log(error);
