@@ -35,7 +35,10 @@ const Navbar = () => {
                   <Link to="/item">Productos</Link>
                 </li>
                 <li>
-                  <Link to="/logout">salir</Link>
+                  <Link to="/logout">Logout</Link>
+                </li>
+                <li>
+                  <Link to="/crear"></Link>
                 </li>
               </>
             ) : (
