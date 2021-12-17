@@ -27,13 +27,13 @@ export default function Cart(handleAddProduct,handleRemoveProduct,handleClearCar
 
     return (
         <div className="cart-items">
-                <h1>Articulos del carrito</h1>
+                <h1>Articulos del carrito
 
-            <div classname="clear-cart">
-                {context.cartItems.length >=1 && (<button classname="clear-cart-items" onClick={()=>context.handleClearCart()}>
+           
+                {context.cartItems.length >=1 && (<button id="clear-cart" onClick={()=>context.handleClearCart()}>
                     Limpiar Carrito</button>)}
-            </div>
-            {context.cartItems.length===0 && (<div>NO HAY ARTICULO AGREGADOS</div>)}
+                    </h1>
+            {context.cartItems.length===0 && (<div> <h3>NO HAY ARTICULO AGREGADOS </h3></div>)}
 
             <div>
                 {context.cartItems.map( (item)=>(
@@ -58,16 +58,16 @@ export default function Cart(handleAddProduct,handleRemoveProduct,handleClearCar
                            Precio Unitario: ${item.price}
                         </div>
                         <div >
-                            Total: ${item.cant*item.price}
+                            Subtotal: ${item.cant*item.price}
                         </div>
                         </div>
                     </div>
                 ))}
             </div>
             <div className="precio-total">
-                      <h3>Monto total</h3>
+                      <h3>Total a Pagar</h3>
                     <div className="precio">
-                        <h3>{TotalPaga}</h3>
+                        <h3>$ {TotalPaga}</h3>
                 
                     </div>
             </div>
