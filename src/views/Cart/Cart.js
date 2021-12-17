@@ -9,8 +9,8 @@ export default function Cart(handleAddProduct,handleRemoveProduct,handleClearCar
 
     useEffect(() => {
         let auxTotalPaga=0;
-        context.cartItems.map((item)=>{
-            auxTotalPaga= auxTotalPaga + item.cant*item.price})
+        context.cartItems.map(item=>
+            auxTotalPaga= auxTotalPaga + item.cant*item.price)
             //console.log(TotalPaga);
             setTotalPaga(auxTotalPaga);
         
