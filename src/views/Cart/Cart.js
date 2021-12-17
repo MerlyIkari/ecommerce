@@ -27,12 +27,13 @@ export default function Cart(handleAddProduct,handleRemoveProduct,handleClearCar
 
     return (
         <div className="cart-items">
-                <h1>Articulos del carrito
+                <h1>Articulos del carrito </h1>
 
-           
+                <h2>
                 {context.cartItems.length >=1 && (<button id="clear-cart" onClick={()=>context.handleClearCart()}>
                     Limpiar Carrito</button>)}
-                    </h1>
+                    </h2>
+                    
             {context.cartItems.length===0 && (<div> <h3>NO HAY ARTICULO AGREGADOS </h3></div>)}
 
             <div>
@@ -65,7 +66,7 @@ export default function Cart(handleAddProduct,handleRemoveProduct,handleClearCar
                 ))}
             </div>
             <div className="precio-total">
-                      <h3>Total a Pagar</h3>
+                      <h3>TOTAL A PAGAR :</h3>
                     <div className="precio">
                         <h3>$ {TotalPaga}</h3>
                 

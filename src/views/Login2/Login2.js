@@ -13,7 +13,7 @@ export default function Login() {
     axios
       .post("https://ecomerce-master.herokuapp.com/api/v1/login", datos)
       .then((response) => {
-        //window.localStorage.setItem("token", response.data.tokenAdmin);
+        window.localStorage.setItem("token", response.data.tokenAdmin);
         const config = {
           headers: {
             Authorization: `JWT ${response.data.tokenAdmin}`,
