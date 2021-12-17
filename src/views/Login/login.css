@@ -1,0 +1,109 @@
+
+
+.login {
+    display: block;
+    margin-top: 40px !important;
+    margin : 0 auto;
+    border: 4px double darkslateblue;
+    border-radius: 15px;
+    background: linear-gradient(197deg, #8279c2 0%, #fff 100%);
+    width: 30%;
+    height: 40%;
+}
+
+h1 {
+    display: flex;
+    color: white;
+    justify-content: center;
+    text-align: center;
+    background-color: darkslateblue;
+    margin: 0 auto; 
+    padding: 10px;
+}
+
+
+
+/* css para los label */
+
+.label--group  {
+    font-weight: bold;
+    padding: 20px;
+    margin: 20px;
+    background-color: rgba(71, 61, 139, 0.26); 
+    width: 80%;
+    border-radius: 15px;
+    
+}
+
+@media (max-width: 320px) and (min-width:100px) {
+    .login {
+        width : 80vw;
+        
+    }
+    .label--group  {
+        width : 65%;
+    }
+    
+}
+.label--group label {
+    padding: 20px;
+    margin: 0 auto;
+}
+
+@media (max-width: 480px) and (min-width:319px) {
+    .login {
+        width : 60vw;
+        
+    }
+    .label--group  {
+        width : 70%;
+    }
+}
+
+@media (max-width: 768px) and (min-width:479px) {
+    .login {
+        width : 60vw;
+        
+    }
+    .label--group  {
+        width : 80%;
+    }
+}
+
+@media (max-width: 1200px) and (min-width:767px) {
+    .login {
+        width : 60vw;
+        
+    }
+    .label--group  {
+        width : 80%;
+    }
+}
+/* CSS DEL PLACEHOLDER */
+
+.label--group input {
+    margin-top: 10px;
+    padding: 10px;
+    width: 90%;
+    border-radius: 15px;
+    border: none;
+}
+
+/* CSS DEL BOTON INICIAR SESION*/
+
+.btn {
+    color: white;
+    display: block;
+    background-color: darkslateblue;
+    border: 4px double darkslateblue;
+    border-radius: 15px;
+    padding: 10px;
+    margin : 0 auto;
+}
+
+.btn-login {
+    display : flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+

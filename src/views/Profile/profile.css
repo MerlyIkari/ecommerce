@@ -1,9 +1,6 @@
-
-
-.signup {
+.profile {
     display: block;
     margin-top: 40px !important;
-    margin-bottom: 40px !important;
     margin : 0 auto;
     border: 4px double darkslateblue;
     border-radius: 15px;
@@ -12,37 +9,45 @@
     height: 40%;
 }
 
+header {
+    color: black;
+    padding: 10px;
+    text-align: center;
+    border: 4px double darkslateblue;
+    border-radius: 15px;
+    background: linear-gradient(197deg, #8279c2 0%, #fff 100%);
+}
+
+h3 {
+    text-align: center;
+    font-style: darkslateblue;
+    color: darkslateblue;
+}
+
 h1 {
     display: flex;
     color: white;
     justify-content: center;
     text-align: center;
     background-color: darkslateblue;
+    margin: 0 auto; 
     padding: 10px;
 }
 
 
 
 /* css para los label */
+
 .label--group  {
     font-weight: bold;
-    padding: 20px;
-    margin: 20px;
     background-color: rgba(71, 61, 139, 0.26); 
-    width: 90%;
+    width: 80%;
     border-radius: 15px;
     
 }
 
-
-.label--group label {
-    padding: 20px;
-    margin: 0 auto;
-}
-
-
 @media (max-width: 320px) and (min-width:100px) {
-    .signup {
+    .profile {
         width : 80vw;
         
     }
@@ -51,8 +56,9 @@ h1 {
     }
     
 }
-@media (max-width: 480px) and (min-width:320px) {
-    .signup {
+
+@media (max-width: 480px) and (min-width:319px) {
+    .profile {
         width : 60vw;
         
     }
@@ -62,7 +68,7 @@ h1 {
 }
 
 @media (max-width: 768px) and (min-width:479px) {
-    .signup {
+    .profile {
         width : 60vw;
         
     }
@@ -72,7 +78,7 @@ h1 {
 }
 
 @media (max-width: 1200px) and (min-width:767px) {
-    .signup{
+    .profile {
         width : 60vw;
         
     }
@@ -81,36 +87,3 @@ h1 {
     }
 }
 
-.label--group label {
-    padding: 20px;
-    margin: 0 auto;
-}
-
-/* CSS DEL PLACEHOLDER */
-
-.label--group input {
-    margin-top: 10px;
-    padding: 10px;
-    width: 90%;
-    border-radius: 15px;
-    border: none;
-}
-
-/* CSS DEL BOTON INICIAR SESION*/
-
-.btn {
-    color: white;
-    display: block;
-    background-color: darkslateblue;
-    border: 4px double darkslateblue;
-    border-radius: 15px;
-    margin : 0 auto;
-}
-
-.btn-signup {
-    width: 100px;
-    padding: 20px;
-    display : flex;
-    justify-content: center;
-    margin-bottom: 20px !important;
-}

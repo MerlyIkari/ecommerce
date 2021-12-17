@@ -1616,6 +1616,19 @@
     pretty-format "^26.6.2"
 
 "@testing-library/jest-dom@^5.11.4":
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 2a16df04c40a1d25653c277070128e55f4c99702
+  version "5.15.1"
+  resolved "https://registry.yarnpkg.com/@testing-library/jest-dom/-/jest-dom-5.15.1.tgz#4c49ba4d244f235aec53f0a83498daeb4ee06c33"
+  integrity sha512-kmj8opVDRE1E4GXyLlESsQthCXK7An28dFWxhiMwD7ZUI7ZxA6sjdJRxLerD9Jd8cHX4BDc1jzXaaZKqzlUkvg==
+  dependencies:
+    "@babel/runtime" "^7.9.2"
+    "@types/testing-library__jest-dom" "^5.9.1"
+    aria-query "^4.2.2"
+<<<<<<< HEAD
+=======
   version "5.16.0"
   resolved "https://registry.yarnpkg.com/@testing-library/jest-dom/-/jest-dom-5.16.0.tgz#de1a7c5fedfeb80eb2be9fc81f61473973b302b3"
   integrity sha512-ECygvCL6ufPfHna4fsk7o24+3PVNhRbioDpFbfSVEZaglT6EjuRP+w8I5tzigFz1fobpvCrVRoKyR4qx2QUCxw==
@@ -1623,6 +1636,9 @@
     "@babel/runtime" "^7.9.2"
     "@types/testing-library__jest-dom" "^5.9.1"
     aria-query "^5.0.0"
+>>>>>>> 9748026b0e23908d43a87a7ef8ae5abcc97c1ff7
+=======
+>>>>>>> 2a16df04c40a1d25653c277070128e55f4c99702
     chalk "^3.0.0"
     css "^3.0.0"
     css.escape "^1.5.1"
@@ -2325,11 +2341,17 @@ aria-query@^4.2.2:
     "@babel/runtime" "^7.10.2"
     "@babel/runtime-corejs3" "^7.10.2"
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 aria-query@^5.0.0:
   version "5.0.0"
   resolved "https://registry.yarnpkg.com/aria-query/-/aria-query-5.0.0.tgz#210c21aaf469613ee8c9a62c7f86525e058db52c"
   integrity sha512-V+SM7AbUwJ+EBnB8+DXs0hPZHO0W6pqBcc0dW90OwtVG02PswOu/teuARoLQjdDOH+t9pJgGnW5/Qmouf3gPJg==
 
+>>>>>>> 9748026b0e23908d43a87a7ef8ae5abcc97c1ff7
+=======
+>>>>>>> 2a16df04c40a1d25653c277070128e55f4c99702
 arity-n@^1.0.4:
   version "1.0.4"
   resolved "https://registry.yarnpkg.com/arity-n/-/arity-n-1.0.4.tgz#d9e76b11733e08569c0847ae7b39b2860b30b745"
